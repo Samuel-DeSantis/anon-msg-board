@@ -46,7 +46,7 @@ class SignIn extends Component {
       }
     })
     .then(error => console.log('Error :', error));
-    this.props.history.push('/messages')
+    // this.props.history.push('/messages')
   }
 
 

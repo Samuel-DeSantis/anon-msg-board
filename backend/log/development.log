@@ -887,3 +887,386 @@ Processing by UsersController#create as JSON
 Completed 403 Forbidden in 171ms (ActiveRecord: 0.3ms | Allocations: 507)
 
 
+Started GET "/users" for ::1 at 2022-02-15 22:44:22 -0700
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3510)
+
+
+Started POST "/users" for ::1 at 2022-02-15 22:54:28 -0700
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220216054614_create_messages.rb
+
+
+):
+  
+activerecord (6.1.4.6) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.6) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.6) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.4.6) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.4.6) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.4.6) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.6) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2022-02-15 22:54:38 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220216054614_create_messages.rb
+
+
+):
+  
+activerecord (6.1.4.6) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.6) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.6) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.6) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.6) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.6) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMessages (20220216054614)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220216054614"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2022-02-15 22:54:55 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.7ms | Allocations: 4094)
+
+
+Started POST "/users" for ::1 at 2022-02-15 22:55:01 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "samuel-desantis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `create'
+Completed 201 Created in 171ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 893)
+
+
+Started POST "/users" for ::1 at 2022-02-15 22:56:33 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"b0c9cccd-1321-46bf-be21-dd6ffcffc8a9", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 59)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:26:54 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 1281)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:26:57 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"a65b6c93-b594-4ae9-9a6e-dcfd91d55894", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:27:08 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 704)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:28:12 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 704)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:28:30 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: 1edee49e-5a22-492b-99c6-f86d4a0b5f59", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:29:07 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 704)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:29:09 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: fe14afe0-a125-4fe6-ad2b-d64a75ab49e6", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:29:50 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: 0f83d62a-fca4-46be-8ce9-faed9da0c79a", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:30:46 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: a8820d3b-92b6-40b1-b8be-d4e0ace6f3ac", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:31:28 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: 5ab44c22-1b17-4f30-bc6d-855d6cdfcf40", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:31:34 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: 800b3c7b-1d3e-4688-850e-e45009d0221f", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:32:40 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: dea5b603-81e3-4a2b-88b6-c9701d830ea3", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:33:30 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: 56c36f7c-3ebb-49a3-b268-9f33760f1cd8", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:34:10 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: 6dc45c0e-d84a-48fd-8e6c-8ed1985c97d6", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:34:30 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 704)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:34:31 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 704)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:36:04 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 704)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:36:06 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: 84c39c2f-3fb4-4e28-8a65-3aa3757d24a8", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:36:12 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 704)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:36:33 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"anon: f7452f72-e534-47b9-a4f3-61d762eda28e", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:37:47 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"12345", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:38:21 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"12345", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:40:00 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"12345", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 55)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:40:11 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asd"], ["password_digest", "$2a$12$Z5K/F.h6EzlfwKuVoeMSOOtppbkeAwZT5xSLYI4txar40Pw.F3vlu"], ["created_at", "2022-02-16 06:40:11.785924"], ["updated_at", "2022-02-16 06:40:11.785924"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 184ms (Views: 0.4ms | ActiveRecord: 7.1ms | Allocations: 4177)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:41:14 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"status"=>"SIGN_UP", "username"=>"anon: f2b61cf0-5c37-4c2e-b4a3-a3d4be8e308f", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "anon: f2b61cf0-5c37-4c2e-b4a3-a3d4be8e308f"], ["password_digest", "$2a$12$qQqkxKPsQzeSRNNsTAFaGO3821Ucria9vpFAqmi62pkN506HPp0c2"], ["created_at", "2022-02-16 06:41:14.811387"], ["updated_at", "2022-02-16 06:41:14.811387"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 189ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 3953)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:41:18 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 948)
+
+
+  [1m[36mUser Destroy (2.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 23:41:35 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 583)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:41:39 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"status"=>"SIGN_UP", "username"=>"anon: f3f7195c-1cc3-4870-a589-db62d716db5b", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "anon: f3f7195c-1cc3-4870-a589-db62d716db5b"], ["password_digest", "$2a$12$zquoAN5xD5pVJIkmEScWceNIL8zTvznj5E6beKd8LeOB2FnKhfApq"], ["created_at", "2022-02-16 06:41:39.615931"], ["updated_at", "2022-02-16 06:41:39.615931"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 178ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 5235)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:43:17 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"status"=>"SIGN_UP", "username"=>"anon: c7010110-434b-48e8-9376-3437a2269645", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "anon: c7010110-434b-48e8-9376-3437a2269645"], ["password_digest", "$2a$12$gP0Kd2wYytKbib8EGhzDV.fXxq7VXBazd40gk9TKutgleUzDmtPiW"], ["created_at", "2022-02-16 06:43:17.807355"], ["updated_at", "2022-02-16 06:43:17.807355"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 189ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 4411)
+
+
+Started GET "/users" for ::1 at 2022-02-15 23:43:21 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 829)
+
+
+Started POST "/users" for ::1 at 2022-02-15 23:46:34 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "$2a$12$VDDPfVMHsWyFoaP08/.ojOUYoUvrr6RG8ltrqFvjSeXLxnq8TZCPe"], ["created_at", "2022-02-16 06:46:34.221309"], ["updated_at", "2022-02-16 06:46:34.221309"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 185ms (Views: 0.5ms | ActiveRecord: 3.1ms | Allocations: 4411)
+
+
