@@ -1,0 +1,399 @@
+Started GET "/" for ::1 at 2022-02-13 23:24:11 -0700
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220214062246_create_users.rb
+
+
+):
+  
+activerecord (6.1.4.6) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.6) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.6) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.6) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.6) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.6) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.6) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+railties (6.1.4.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220214062246)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220214062246"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-02-14 06:24:43.054754"], ["updated_at", "2022-02-14 06:24:43.054754"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-02-13 23:24:45 -0700
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sdesantis/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sdesantis/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 24.7ms | Allocations: 201)
+Completed 200 OK in 55ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+Started GET "/users" for ::1 at 2022-02-13 23:24:50 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1109)
+
+
+Started OPTIONS "/users" for ::1 at 2022-02-13 23:25:00 -0700
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2022-02-13 23:27:01 -0700
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2022-02-13 23:28:13 -0700
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2022-02-13 23:28:31 -0700
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2022-02-13 23:28:41 -0700
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2022-02-13 23:28:54 -0700
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started OPTIONS "/users" for ::1 at 2022-02-13 23:29:00 -0700
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
+Started GET "/users" for ::1 at 2022-02-13 23:29:25 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 3096)
+
+
+Started POST "/users" for ::1 at 2022-02-13 23:29:28 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"sid", "password_digest"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "sid"], ["password_digest", "pwd"], ["created_at", "2022-02-14 06:29:28.483965"], ["updated_at", "2022-02-14 06:29:28.483965"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 0.4ms | ActiveRecord: 3.5ms | Allocations: 7135)
+
+
+Started GET "/users" for ::1 at 2022-02-13 23:29:33 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 733)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+Started GET "/users" for ::1 at 2022-02-13 23:30:41 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 1593)
+
+
+Started POST "/users" for ::1 at 2022-02-13 23:30:43 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"sid", "password_digest"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "sid"], ["password_digest", "pwd"], ["created_at", "2022-02-14 06:30:43.716557"], ["updated_at", "2022-02-14 06:30:43.716557"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 0.4ms | ActiveRecord: 3.6ms | Allocations: 6750)
+
+
+Started GET "/users" for ::1 at 2022-02-13 23:30:46 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 710)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/users" for ::1 at 2022-02-13 23:35:59 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password_digest"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "pwd"], ["created_at", "2022-02-14 06:35:59.984587"], ["updated_at", "2022-02-14 06:35:59.984587"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 4353)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2022-02-13 23:38:07 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.7ms | Allocations: 1579)
+
+
+Started POST "/users" for ::1 at 2022-02-13 23:38:19 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "$2a$12$igz7SEWPextfiWcZ0r8eNuQHtyfOeo3nMOeYjD3gCwf5c46VkgVfO"], ["created_at", "2022-02-14 06:38:19.907160"], ["updated_at", "2022-02-14 06:38:19.907160"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 188ms (Views: 0.5ms | ActiveRecord: 3.9ms | Allocations: 7714)
+
+
+Started GET "/users" for ::1 at 2022-02-13 23:38:23 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 714)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/users" for ::1 at 2022-02-14 00:34:48 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"linda", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "linda"], ["password_digest", "$2a$12$szuA8nc2AJuYxxtp.PXvZOrGdnyF0FhExfJSg4vk6jgHut5NPPB3a"], ["created_at", "2022-02-14 07:34:48.224040"], ["updated_at", "2022-02-14 07:34:48.224040"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 180ms (Views: 0.4ms | ActiveRecord: 3.1ms | Allocations: 3892)
+
+
+Started POST "/users" for ::1 at 2022-02-14 00:35:51 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"nate", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "nate"], ["password_digest", "$2a$12$7va8iv0Jj5xRDBjIvhJ7R.QRI382ex.K38rKREVSIB6N3lNetQqGG"], ["created_at", "2022-02-14 07:35:51.292115"], ["updated_at", "2022-02-14 07:35:51.292115"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 176ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 4376)
+
+
+  [1m[36mUser Destroy (2.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2022-02-14 00:37:45 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 599)
+
+
+Started POST "/users" for ::1 at 2022-02-14 00:37:59 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "$2a$12$jJJ/4NSvhokwwT4P3jgV0.93H6qoftQtmsCU3MSaG.sHKt20om236"], ["created_at", "2022-02-14 07:38:00.124320"], ["updated_at", "2022-02-14 07:38:00.124320"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 179ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 4210)
+
+
+Started GET "/users" for ::1 at 2022-02-14 00:38:05 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 704)
+
+
+Started POST "/users" for ::1 at 2022-02-14 00:38:52 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"linda", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "linda"], ["password_digest", "$2a$12$DSi6uZ82nRGfxygvSjOqjuhW49rDaW6DbwDd712tezpQS1cl309ea"], ["created_at", "2022-02-14 07:38:52.894570"], ["updated_at", "2022-02-14 07:38:52.894570"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 172ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 4828)
+
+
+Started POST "/users" for ::1 at 2022-02-14 00:40:16 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"nate", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "nate"], ["password_digest", "$2a$12$2gN.HquVpdy.2JkzWi06gu.FzF/KNfpAkWTVte0pbu/dNZV1er17C"], ["created_at", "2022-02-14 07:40:16.952234"], ["updated_at", "2022-02-14 07:40:16.952234"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 175ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 4834)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Destroy (2.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-14 00:44:14 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 585)
+
+
+Started POST "/users" for ::1 at 2022-02-14 00:44:27 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "$2a$12$kHse8Hho2FCJqydyb93dX.TymCtwJz6Ee4003sv60MbOmBxVZltkS"], ["created_at", "2022-02-14 07:44:28.022812"], ["updated_at", "2022-02-14 07:44:28.022812"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 174ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 5246)
+
+
+Started POST "/users" for ::1 at 2022-02-14 00:48:03 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"linda", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "linda"], ["password_digest", "$2a$12$V2g6UFvomEyKRSj8faSJSO7.mXUtaeNPuvNobsS3Mcikg41k/Yf1W"], ["created_at", "2022-02-14 07:48:03.597051"], ["updated_at", "2022-02-14 07:48:03.597051"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 184ms (Views: 0.3ms | ActiveRecord: 5.8ms | Allocations: 4372)
+
+
+Started POST "/users" for ::1 at 2022-02-14 00:49:18 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"nate", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "nate"], ["password_digest", "$2a$12$CqnlJPa0NIQ37BaxqOFBN./0W2vFQIdlX7ZP7PUZBne76clqReAMK"], ["created_at", "2022-02-14 07:49:18.272923"], ["updated_at", "2022-02-14 07:49:18.272923"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 175ms (Views: 0.4ms | ActiveRecord: 2.7ms | Allocations: 4349)
+
+
+Started POST "/users" for ::1 at 2022-02-14 00:50:31 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"mgood", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "mgood"], ["password_digest", "$2a$12$nRkh25nFAJYtgLL6G2bmmuer9oHORQw40zC26X3OPaAiSY79AxHx6"], ["created_at", "2022-02-14 07:50:31.738874"], ["updated_at", "2022-02-14 07:50:31.738874"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 181ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 4366)
+
+
+Started GET "/users" for ::1 at 2022-02-15 20:28:45 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 1644)
+
+
+Started POST "/users" for ::1 at 2022-02-15 20:59:48 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"DirkWinters", "password"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "DirkWinters"], ["password_digest", "$2a$12$OYyHuiDwENhXikmhrYZsVeqmqPV95/NXAr7sjLQ0vqskDDRQ31.zG"], ["created_at", "2022-02-16 03:59:48.921634"], ["updated_at", "2022-02-16 03:59:48.921634"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 182ms (Views: 0.3ms | ActiveRecord: 3.5ms | Allocations: 5218)
+
+
+  [1m[36mUser Destroy (2.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 21:07:33 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.5ms | Allocations: 1159)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:07:41 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "$2a$12$bMKckzahlq/P/81AZ0X8.e3u4PSq.Xiw985PQYscyG8tlwVau35aK"], ["created_at", "2022-02-16 04:07:41.238341"], ["updated_at", "2022-02-16 04:07:41.238341"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 183ms (Views: 0.4ms | ActiveRecord: 3.4ms | Allocations: 5691)
+
+
