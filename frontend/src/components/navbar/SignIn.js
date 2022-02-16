@@ -2,11 +2,14 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { login, logout } from "../../actions";
 
+const URL = 'http://localhost:5000/'
+
 class SignIn extends Component {
 
   state = {
     username: '',
-    password: ''
+    password: '',
+    status: 'SIGN_IN'
   }
 
   formatState = () => Object.assign({}, {user: this.state})
@@ -35,10 +38,12 @@ class SignIn extends Component {
     .then(response => response.json())
     .then(result => {
       console.log('Success: ', result)
-      this.props.login({
-        id: result.id,
-        username: result.username
-      })
+      if (result !== undefined) {
+        this.props.login({
+          id: result.id,
+          username: result.username
+        })
+      }
     })
     .then(error => console.log('Error :', error));
     this.props.history.push('/messages')
@@ -64,7 +69,7 @@ class SignIn extends Component {
           value={this.state.password}
           onChange={this.handleOnChange} 
           placeholder='Your password...'
-        /><br/>
+        /><br/><br/>
         <input type='submit' />
       </form>
     )

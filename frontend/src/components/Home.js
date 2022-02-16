@@ -5,8 +5,8 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-          <h3>Please select an option...</h3>
-          <NavbarContainer />
+          <h2>Please sign in or sign up to access the message board...</h2>
+
       </div>
     )
   }

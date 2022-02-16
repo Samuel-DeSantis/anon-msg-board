@@ -9,7 +9,8 @@ class SignUp extends Component {
 
   state = {
     username: '',
-    password: ''
+    password: '',
+    status: 'SIGN_UP'
   }
 
   formatState = () => Object.assign({}, {user: this.state})
@@ -43,7 +44,7 @@ class SignUp extends Component {
         username: result.username
       })
     })
-    .then(error => console.log('Error :', error));
+    .then(error => {if (error) console.log('Error :', error)});
     this.props.history.push('/messages')
   }
 
@@ -66,7 +67,7 @@ class SignUp extends Component {
           value={this.state.password}
           onChange={this.handleOnChange} 
           placeholder='Your password...'
-        /><br/>
+        /><br/><br/>
         <input type='submit' />
       </form>
     )
