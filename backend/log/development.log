@@ -397,3 +397,493 @@ Processing by UsersController#create as JSON
 Completed 201 Created in 183ms (Views: 0.4ms | ActiveRecord: 3.4ms | Allocations: 5691)
 
 
+Started GET "/users" for ::1 at 2022-02-15 21:17:57 -0700
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 3553)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:23:13 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"linda", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "linda"], ["password_digest", "$2a$12$Cig0hejEsOL8uFAufkLPIunyUYXVJ74pUD.ou7ZYK5aHpCmR2rg1y"], ["created_at", "2022-02-16 04:23:13.219279"], ["updated_at", "2022-02-16 04:23:13.219279"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 181ms (Views: 0.4ms | ActiveRecord: 2.9ms | Allocations: 4098)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:23:45 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 825)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:24:25 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"DirkWinters", "password"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "DirkWinters"], ["password_digest", "$2a$12$RDcRkq4bQthWxWP4vrHZvenVmBJ/kixGfeH6LB4yv5fj8GAShzfEm"], ["created_at", "2022-02-16 04:24:25.613078"], ["updated_at", "2022-02-16 04:24:25.613078"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 187ms (Views: 0.6ms | ActiveRecord: 4.0ms | Allocations: 7379)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:24:39 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 976)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:24:45 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 947)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/users" for ::1 at 2022-02-15 21:25:54 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asd"], ["password_digest", "$2a$12$uoobDBmsmmdLQmCnZgaJs.1hsfmeg0Nr5rYWOYd0QI9tMKQ/BVQZK"], ["created_at", "2022-02-16 04:25:54.405614"], ["updated_at", "2022-02-16 04:25:54.405614"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 190ms (Views: 0.1ms | ActiveRecord: 3.4ms | Allocations: 7677)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:28:13 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"Billy", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Billy"], ["password_digest", "$2a$12$HpN15wmAwu5F55XhUnaXB.9tdWfVdYtGzEXb8fBJoQXvjkEqATrna"], ["created_at", "2022-02-16 04:28:13.767955"], ["updated_at", "2022-02-16 04:28:13.767955"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 181ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 5593)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:28:37 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asd"], ["password_digest", "$2a$12$/hWGqSwEhBD2O3.5UnJMS.X/woTrQLsMnXWbcWqMPeeqL914cW6Ha"], ["created_at", "2022-02-16 04:28:37.216235"], ["updated_at", "2022-02-16 04:28:37.216235"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 181ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 3953)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:29:08 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"qwd", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "qwd"], ["password_digest", "$2a$12$esr8W4bJR8OvrYTirk7jOOaM5MCHJpMwmIPxtW4U6rMsYpnnGxNs2"], ["created_at", "2022-02-16 04:29:08.519805"], ["updated_at", "2022-02-16 04:29:08.519805"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 180ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 4273)
+
+
+  [1m[36mUser Destroy (2.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 21:29:32 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 605)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:30:01 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asd"], ["password_digest", "$2a$12$x8ILuVmRJ4i7Mq32It0tXenjIVJCeD9VJ0QxzCQCdh9k/DTSq/s9K"], ["created_at", "2022-02-16 04:30:01.361751"], ["updated_at", "2022-02-16 04:30:01.361751"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 184ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 4729)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:31:25 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 715)
+
+
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 21:31:30 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 583)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:31:37 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asd"], ["password_digest", "$2a$12$ZSCzIZrCoyp9XxGD3dPECeZYf.XxTglbnPbvhX3EVwvtchV7XD.cu"], ["created_at", "2022-02-16 04:31:37.506518"], ["updated_at", "2022-02-16 04:31:37.506518"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 183ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 4691)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:31:42 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 704)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:32:57 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "$2a$12$rmjHx6xxLYY2Y6mWyBssq.CHkl4WmatcGnZgGwpwQxKLzUBFiMDOa"], ["created_at", "2022-02-16 04:32:58.034647"], ["updated_at", "2022-02-16 04:32:58.034647"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 184ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 4765)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:33:00 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 825)
+
+
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 21:33:49 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 1578)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:33:54 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 45)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:34:01 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 583)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:34:26 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"ASD", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+Completed 204 No Content in 0ms (Allocations: 73)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:34:28 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1208)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:34:54 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1575)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:34:59 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asd"], ["password_digest", "$2a$12$aYVqnUZslGPSlipAmXXBTucg8kSm6yK8SqA3udVtFTkGl5s1Xpl2O"], ["created_at", "2022-02-16 04:34:59.838898"], ["updated_at", "2022-02-16 04:34:59.838898"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 182ms (Views: 0.4ms | ActiveRecord: 4.1ms | Allocations: 8604)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:35:02 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 712)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:35:39 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"hello", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "hello"], ["password_digest", "$2a$12$bX6tsN37h8VaQSpGWD7XI.FBWatk0PIx3efrwH8XeydV6yzT5feF."], ["created_at", "2022-02-16 04:35:39.477241"], ["updated_at", "2022-02-16 04:35:39.477241"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 179ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 5239)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:36:58 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 825)
+
+
+  [1m[36mUser Destroy (2.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 21:37:02 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 583)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:37:07 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asd"], ["password_digest", "$2a$12$yy/B/L4lG.3Enq2ZjPDW2OAQhefTxQZGTNH6Ke5s6Qvxjt5o9ada2"], ["created_at", "2022-02-16 04:37:07.827682"], ["updated_at", "2022-02-16 04:37:07.827682"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 190ms (Views: 0.4ms | ActiveRecord: 2.9ms | Allocations: 4406)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:37:25 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 704)
+
+
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 21:38:17 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 583)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:38:23 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "asd"], ["password_digest", "$2a$12$Dg.nAmze6FM2PoTQk55WI.Mz83EHKOyFCN4G0JrUzElw/VwgDsneC"], ["created_at", "2022-02-16 04:38:24.024779"], ["updated_at", "2022-02-16 04:38:24.024779"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 183ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 5293)
+
+
+Started GET "/users" for ::1 at 2022-02-15 21:42:31 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.3ms | Allocations: 4512)
+
+
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 21:42:35 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 583)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:42:46 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "$2a$12$cQm3xb.YmCj6CA1iUVIO7OvgpNER2tGWAU8QTL.TCaiZteuIt5hVS"], ["created_at", "2022-02-16 04:42:46.425909"], ["updated_at", "2022-02-16 04:42:46.425909"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 195ms (Views: 0.5ms | ActiveRecord: 2.7ms | Allocations: 4510)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:47:59 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+Completed 500 Internal Server Error in 4ms (Allocations: 2554)
+
+
+  
+NoMethodError (undefined method `find_b' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  find_by
+               find_by!
+               find):
+  
+app/controllers/users_controller.rb:26:in `create'
+Started GET "/users" for ::1 at 2022-02-15 21:48:50 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.5ms | Allocations: 3745)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:48:57 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2526)
+
+
+  
+NoMethodError (undefined method `find_b' for #<Class:0x00007ff0841ced10>
+Did you mean?  find_by
+               find_by!
+               find):
+  
+app/controllers/users_controller.rb:26:in `create'
+Started POST "/users" for ::1 at 2022-02-15 21:49:11 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+Completed 500 Internal Server Error in 4ms (Allocations: 2538)
+
+
+  
+NoMethodError (undefined method `find_b' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  find_by
+               find_by!
+               find):
+  
+app/controllers/users_controller.rb:26:in `create'
+Started POST "/users" for ::1 at 2022-02-15 21:49:51 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+Completed 500 Internal Server Error in 4ms (Allocations: 2506)
+
+
+  
+NoMethodError (undefined method `find_b' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  find_by
+               find_by!
+               find):
+  
+app/controllers/users_controller.rb:26:in `create'
+Started POST "/users" for ::1 at 2022-02-15 21:50:18 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:26:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "samuel-desantis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `create'
+Completed 201 Created in 17ms (Views: 0.5ms | ActiveRecord: 1.7ms | Allocations: 4457)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:50:41 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:26:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "samuel-desantis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `create'
+Completed 201 Created in 175ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 4228)
+
+
+  [1m[36mUser Destroy (2.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+Started GET "/users" for ::1 at 2022-02-15 21:51:15 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 598)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:51:28 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_UP"}}
+[31mUnpermitted parameter: :status[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "samuel-desantis"], ["password_digest", "$2a$12$fvS/3Srs11oLX.1eVGR5de2y0TPTuOKb9q2M1/4rXXhuPhTg3uKZi"], ["created_at", "2022-02-16 04:51:28.267411"], ["updated_at", "2022-02-16 04:51:28.267411"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 182ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 4939)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:51:45 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "samuel-desantis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `create'
+Completed 201 Created in 176ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 681)
+
+
+Started POST "/users" for ::1 at 2022-02-15 21:52:04 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "samuel-desantis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `create'
+Completed 403 Forbidden in 171ms (ActiveRecord: 0.2ms | Allocations: 510)
+
+
+Started GET "/users" for ::1 at 2022-02-15 22:33:07 -0700
+Processing by UsersController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 1280)
+
+
+Started POST "/users" for ::1 at 2022-02-15 22:33:14 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "samuel-desantis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `create'
+Completed 201 Created in 179ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 696)
+
+
+Started POST "/users" for ::1 at 2022-02-15 22:33:24 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"samuel-desantis", "password"=>"[FILTERED]", "status"=>"SIGN_IN"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "samuel-desantis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `create'
+Completed 403 Forbidden in 171ms (ActiveRecord: 0.3ms | Allocations: 507)
+
+

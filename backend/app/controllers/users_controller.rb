@@ -15,12 +15,17 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
-
-    if @user.save
+    if params[:user][:status] == 'SIGN_UP'
+      @user = User.new(user_params)
+      if @user.save
+        render json: @user, status: :created, location: @user
+      else
+        render json: @user.errors, status: :unprocessable_entity
+      end
+    elsif params[:user][:status] == 'SIGN_IN'
+      @user = User.find_by(username: params[:user][:username])
+      return head(:forbidden) unless @user.authenticate(params[:user][:password])
       render json: @user, status: :created, location: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
     end
   end
 
